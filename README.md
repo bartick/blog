@@ -1,6 +1,6 @@
-# vue-project
+# Blog Project
 
-This template should help get you started developing with Vue 3 in Vite.
+This is my very own blog project. It is built with [Vue 3](https://v3.vuejs.org/) and [Vite](https://vitejs.dev/).
 
 ## Recommended IDE Setup
 
@@ -18,6 +18,8 @@ npm install
 
 ### Compile and Hot-Reload for Development
 
+Before running the project please make sure to create a `.env` file in the root directory and add the following environment variables:
+
 ```sh
 npm run dev
 ```
@@ -26,4 +28,17 @@ npm run dev
 
 ```sh
 npm run build
+```
+
+#### If you don't want to use google analytics then remove this code from all the vue files under src/views
+
+```js
+import { logEvent } from 'firebase/analytics';
+import { analytics } from '../firebase';
+
+logEvent(analytics, 'page_view', {
+  page_location: window.location.href,
+  page_path: window.location.pathname,
+  page_title: 'Bartick\'s Blog'
+})
 ```
