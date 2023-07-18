@@ -1,0 +1,35 @@
+{
+  "name": "blog-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "sitemap": "node build/sitemap.js",
+    "feed": "node build/feed.js",
+    "dev": "vite --host",
+    "build": "npm run sitemap && npm run feed && vite build",
+    "preview": "vite preview",
+    "post": "node posts/createPost.js"
+  },
+  "dependencies": {
+    "@unhead/vue": "^1.1.30",
+    "firebase": "^10.0.0",
+    "highlight.js": "^11.8.0",
+    "markdown-it": "^13.0.1",
+    "medium-zoom": "^1.0.8",
+    "moment": "^2.29.4",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.25",
+    "postcss-nesting": "^12.0.0",
+    "sharp": "^0.32.3",
+    "svgo": "^3.0.2",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9",
+    "vite-plugin-image-optimizer": "^1.1.6",
+    "vite-plugin-vue-markdown": "^0.23.5"
+  }
+}

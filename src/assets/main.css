@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+
+@import url('./components/resets.css');
+
+@import 'tailwindcss/components';
+
+@import url('./components/markdown');
+
+@import 'tailwindcss/utilities';
+
+@import 'highlight.js/styles/github.css';

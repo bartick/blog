@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0">
+        <channel>
+            <title>Bartick's Blog</title>
+            <link>https://blog.bartick.me</link>
+            <description>Bartick's personal blog</description>
+            
+                <item>
+                    <title>Getting Started</title>
+                    <link>https://blog.bartick.me/getting-started</link>
+                    <description>This is a demo blog to keep a small not on how this website works. USe it as a reference to start writing your own blogs.</description>
+                    <pubDate>2023-07-18T12:04:30.472Z</pubDate>
+                </item>
+            
+        </channel>
+    </rss>
