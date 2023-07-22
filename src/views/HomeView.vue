@@ -36,16 +36,21 @@
           <ul class="flex items-center justify-between sm:text-lg lg:text-xl">
             <li class="lg:w-1/5">
               <button @click="prevPage" aria-current="page" rel="prev" class="text-gray-700 hover:text-black px-4 py-2 transition-colors duration-300 active opacity-0" disabled>
-          ← Previous
-        </button>
-      </li>
-      <li class="hidden md:flex w-auto text-center text-gray-600 text-base">Page {{values.currentPage}} of {{values.totalPages}}</li>
-      <li class="lg:w-1/5 text-right">
-        <button @click="nextPage" rel="next" class="text-gray-700 hover:text-black px-4 py-2 transition-colors duration-300">
-          Next →
-        </button></li></ul></nav></section>
+                ← Previous
+              </button>
+            </li>
+            <li class="hidden md:flex w-auto text-center text-gray-600 text-base">Page {{values.currentPage}} of {{values.totalPages}}</li>
+            <li class="lg:w-1/5 text-right">
+              <button @click="nextPage" rel="next" class="text-gray-700 hover:text-black px-4 py-2 transition-colors duration-300">
+                Next →
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </section>
     </main>
   </div>
+  <FooterVue />
 </template>
 
 <script setup>
@@ -55,6 +60,8 @@ import moment from 'moment'
 import { useSeoMeta } from '@unhead/vue';
 import { logEvent } from 'firebase/analytics';
 import { analytics } from '../firebase';
+
+import FooterVue from '@/components/Footer.vue';
 
 const app = getCurrentInstance();
 

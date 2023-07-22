@@ -17,9 +17,10 @@
     </nav>
   </header>
   
-  <div class="content max-w-xl md:max-w-2xl xl:max-w-4xl mx-auto px-6 sm:px-12 pt-16" id="content">
+  <div class="content max-w-xl md:max-w-2xl xl:max-w-4xl mx-auto px-6 sm:px-12 pt-16 border-b border-gray-300" id="content">
     <Content.components.default />
   </div>
+  <FooterVue />
 </template>
 
 <script setup>
@@ -29,6 +30,8 @@ import moment from 'moment'
 import mediumZoom from 'medium-zoom'
 import { logEvent } from 'firebase/analytics';
 import { analytics } from '../firebase';
+
+import FooterVue from '@/components/Footer.vue';
 
 const route = useRoute()
 const router = useRouter()
