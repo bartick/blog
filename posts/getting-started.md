@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: This is a demo blog to keep a small not on how this website works. USe it as a reference to start writing your own blogs.
+description: This is a demo blog to keep a small not on how this website works. Use it as a reference to start writing your own blogs.
 tags: [gettings-started,bartick,blog,markdown]
 image: /images/Blog.png
 date: 2023-07-18T12:04:30.472Z

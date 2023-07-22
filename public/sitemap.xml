@@ -9,7 +9,14 @@
         
             <url>
                 <loc>https://blog.bartick.me/</loc>
-                <lastmod>2023-07-18T17:34:17.308Z</lastmod>
+                <lastmod>2023-07-21T20:38:03.357Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+            </url>
+        
+            <url>
+                <loc>https://blog.bartick.me/autoplay-youtube-embed-with-sound</loc>
+                <lastmod>2023-07-21T16:23:40.842Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>0.8</priority>
             </url>
