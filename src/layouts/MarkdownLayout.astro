@@ -62,5 +62,9 @@ const postDate = new Date(date).toLocaleDateString('en-US', {
             <slot />
         </div>
         <FooterComponent />
+        <script>
+          import mediumZoom from 'medium-zoom';
+          mediumZoom(document.querySelectorAll('img'));
+        </script>
 	</body>
 </html>
