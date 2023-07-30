@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # editor directories and files
 .vscode/
+
+# firebase
+firebase.json
+.firebaserc
