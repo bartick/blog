@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+
+@import url('./components/resets.css');
+
+@import 'tailwindcss/components';
+
+/* @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,700%7CCardo'); */
+
+@import url('./components/markdown');
+
+@import 'tailwindcss/utilities';
+
+/* @import 'highlight.js/styles/github.css'; */

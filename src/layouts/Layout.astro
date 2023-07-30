@@ -1,0 +1,26 @@
+--- 
+import FooterComponent from '../components/Footer.astro';
+import FaviconSetup from '../components/FaviconSetup.astro';
+
+const { metaData } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<FaviconSetup />
+		<title>{metaData.title}</title>
+		{Object.keys(metaData).map((key) => {
+			if (key === 'title') return;
+			return <meta name={key} content={metaData[key]} />;
+		})}
+	</head>
+	<body>
+		<slot />
+		<FooterComponent />
+	</body>
+</html>

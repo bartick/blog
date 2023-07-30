@@ -1,0 +1,7 @@
+::selection {
+    @apply text-white bg-black;
+}
+
+li a {
+    text-decoration: none;
+}

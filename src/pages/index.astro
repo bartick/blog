@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pages from '../components/Pages.vue';
+import '../styles/main.css';
+
+const quickSort = (arr) => {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const pivot = arr[0];
+  const leftArr = [];
+  const rightArr = [];
+  const pivotDate = new Date(pivot.frontmatter.date);
+
+  for (let i = 1; i < arr.length; i++) {
+	const checkDate = new Date(arr[i].frontmatter.date);
+    if (checkDate > pivotDate) {
+      leftArr.push(arr[i]);
+    } else {
+      rightArr.push(arr[i]);
+    }
+  }
+
+  return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
+};
+
+const blogs = quickSort(await Astro.glob('./*.md'));
+
+const url = Astro.url.origin;
+
+const metaData = {
+  title: 'Bartick\'s Blog',
+  description: 'Bartick\'s personal blogging website made with Astro and VueJs with Vite.',
+  keywords: 'vue, vite, blog, bartick, tailwind',
+  ogDescription: 'Bartick\'s personal blogging website made with Astro and VueJs with Vite.',
+  ogTitle: 'Bartick\'s Blog',
+  ogUrl: url,
+  ogImage: url + '/images/Blog.png',
+  ogSiteName: 'Bartick\'s Blog',
+  ogType: 'website',
+  ogLocale: 'en_US',
+  twitterCard: 'summary_large_image',
+  twitterSite: '@BartickM',
+  twitterCreator: '@BartickM',
+  twitterTitle: 'Bartick\'s Blog',
+  twitterDescription:'Bartick\'s personal blogging website made with Astro and VueJs with Vite.',
+  twitterImage: url + '/images/Blog.png',
+  twitterUrl: url,
+  twitterDomain: url,
+  author: 'Bartick',
+  contentType: 'blog',
+}
+---
+
+<Layout metaData={metaData}>
+	<div class="bg-white">
+		<main>
+		  <header>
+			<div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6 py-10 md:py-32 border-b border-gray-300">
+			  <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">
+				<a class="text-black">Bartick's Blog</a>
+			  </h1>
+			  <p class="text-gray-700 text-lg sm:text-3xl">Thoughts, stories, and ideas.</p>
+			</div>
+		  </header>
+		  <Pages allblogs={blogs} client:load />
+		</main>
+	  </div>
+</Layout>
