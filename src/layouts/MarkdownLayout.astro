@@ -1,6 +1,7 @@
 ---
 import FooterComponent from '../components/Footer.astro';
 import FaviconSetup from '../components/FaviconSetup.astro';
+import Analytics from '../components/Analytics.astro';
 import '../styles/main.css';
 
 const {
@@ -13,8 +14,7 @@ const {
         author,
         meta,
         readingTime
-    },
-    rawContent
+    }
 } = Astro.props;
 
 const postDate = new Date(date).toLocaleDateString('en-US', {
@@ -27,6 +27,7 @@ const postDate = new Date(date).toLocaleDateString('en-US', {
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+    <Analytics />
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
@@ -65,6 +66,11 @@ const postDate = new Date(date).toLocaleDateString('en-US', {
         <script>
           import mediumZoom from 'medium-zoom';
           mediumZoom(document.querySelectorAll('img'));
+          gtag('event', 'page_view', {
+            page_location: window.location.href,
+            page_path: window.location.pathname,
+            page_title: document.title
+          })
         </script>
 	</body>
 </html>

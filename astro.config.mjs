@@ -4,6 +4,7 @@ import vue from "@astrojs/vue";
 import sitemap from "@astrojs/sitemap";
 import image from "@astrojs/image";
 import { prettyPrint } from 'recast';
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,6 +21,10 @@ export default defineConfig({
   },
   integrations: [tailwind(), vue(), sitemap(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
+  }), partytown({
+    config: {
+      forward: ["dataLayer.push"]
+    }
   })],
   site: 'https://blog.bartick.me',
   compressHTML: true,

@@ -1,6 +1,7 @@
 --- 
 import FooterComponent from '../components/Footer.astro';
 import FaviconSetup from '../components/FaviconSetup.astro';
+import Analytics from '../components/Analytics.astro';
 
 const { metaData } = Astro.props;
 ---
@@ -8,6 +9,7 @@ const { metaData } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<Analytics />
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
@@ -22,5 +24,12 @@ const { metaData } = Astro.props;
 	<body>
 		<slot />
 		<FooterComponent />
+		<script>
+			gtag('event', 'page_view', {
+				page_location: location.href,
+				page_path: location.pathname,
+				page_title: document.title,
+			});
+		</script>
 	</body>
 </html>
