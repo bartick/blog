@@ -17,7 +17,7 @@
                       blog.frontmatter.author }}</a>
                 </span>
                 <span> · </span>
-                <span>{{ '3' }} min read</span>
+                <span>{{ blog.frontmatter.readingTime || '3' }} min read</span>
               </p>
             </header>
             <p class="leading-normal text-gray-700 text-lg px-2 sm:px-4 md:px-10 text-center">
