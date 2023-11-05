@@ -2,6 +2,7 @@
 import FooterComponent from '../components/Footer.astro';
 import FaviconSetup from '../components/FaviconSetup.astro';
 import Analytics from '../components/Analytics.astro';
+import { Image } from '@astrojs/image/components';
 import '../styles/main.css';
 
 const {
@@ -45,6 +46,7 @@ const postDate = new Date(date).toLocaleDateString('en-US', {
         <header>
             <div class="pt-24">
               <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6">
+                <Image class="mb-4" src={image} alt={title} width={1000} height={467}/>
                 <p class="text-gray-700 text-xs mb-2 uppercase">{readingTime} min read</p>
                 <h1 class="text-3xl sm:text-5xl leading-tight font-sans font-bold mb-2 text-black">{title}</h1>
                 <p class="text-gray-700">
@@ -54,7 +56,7 @@ const postDate = new Date(date).toLocaleDateString('en-US', {
                   <time datetime="2019-02-27 17:54:43" class="capitalize">{postDate}</time>
                 </p>
               </div>
-            </div>
+            </>
             <nav class="absolute top-0 left-0 z-20 mt-6 ml-6">
               <a href="/" class="text-sm border opacity-75 hover:opacity-100 rounded-full px-4 py-2 transition-opacity duration-300 active text-gray-900 border-gray-400">← Home</a>
             </nav>
