@@ -3,7 +3,7 @@ layout: '../layouts/MarkdownLayout.astro'
 title: Autoplay YouTube embed with sound
 description: Have you wondered how can you autoplay youtube embed with sound in your website? I have found a simple way to achieve the same.
 tags: [youtube,autoplay,embed,website,html,css,javascript]
-image: /images/Blog.png
+image: /images/posts/0vytldgn3dylcpwfezfr.webp
 date: 2023-07-21T16:23:40.842Z
 author: bartick
 robots: index, follow

@@ -3,7 +3,7 @@ layout: '../layouts/MarkdownLayout.astro'
 title: Using Reverse Proxy for multiple backends - Nginx
 description: Join me in the world of backend development, where I grapple with the demands of managing a variety of backend projects. When these projects make their way to the live environment, the necessity arises to open specific ports, like the familiar 80 or 443, to facilitate user access. However, as a student, the challenge of juggling numerous projects looms large, exacerbated by the financial constraints that prevent me from obtaining separate Virtual Private Servers (VPS) for each endeavor. This intriguing dilemma has been a persistent ponderance on my journey.
 tags: [nginx,reverse-proxy,backend,server,web,website,html,css,javascript,ubuntu,linux,cerbot,ssl,tls,https]
-image: /images/Blog.png
+image: /images/posts/reverse-proxy.png
 date: 2023-09-05T05:09:05.491Z
 author: bartick
 robots: index, follow
