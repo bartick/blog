@@ -17,7 +17,8 @@ export default defineConfig({
     remarkRehype: {
       footnoteLabel: "Footnotes",
       footnoteBackLabel: "Back to content"
-    }
+    },
+    drafts: true
   },
   integrations: [tailwind(), vue(), sitemap(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
